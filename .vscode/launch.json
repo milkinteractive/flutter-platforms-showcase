@@ -11,7 +11,13 @@
             "deviceId": "chrome"
         },
         {
-            "name": "Phone",
+            "name": "Desktop",
+            "request": "launch",
+            "type": "dart",
+            "deviceId": "macOS"
+        },
+        {
+            "name": "Device",
             "request": "launch",
             "type": "dart",
         },
