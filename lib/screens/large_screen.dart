@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
+import 'package:charts_flutter/flutter.dart' as charts;
+
 import 'package:flutter/material.dart';
 import 'package:railvis/app.dart';
 
@@ -9,14 +13,46 @@ class LargeScreenApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      const Expanded(
-        flex: 4,
-        child: Padding(
-          padding: EdgeInsets.all(12.0),
-          child: GaudeView(),
+      Expanded(
+        flex: 1,
+        child: Column(
+          children: [
+            Processvalues(),
+            TimeView(),
+            Expanded(
+              flex: 1,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.all(16.0),
+                      child: GaudeView(),
+                    ),
+                  ),
+                  Flexible(
+                    child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: ConverterVerticalBar.withSampleData()),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 40,
+              child: RailVisIcons.Row1(),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 40,
+              child: RailVisIcons.Row2(),
+            ),
+            Expanded(flex: 1, child: Container())
+          ],
         ),
       ),
-      Expanded(flex: 6, child: Container(color: Colors.blue))
+      Expanded(flex: 1, child: Container(color: Colors.blue))
     ]);
   }
 }

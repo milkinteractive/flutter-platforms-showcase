@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'app.dart';
 
@@ -20,11 +22,13 @@ class MyApp extends StatelessWidget {
             left: true,
             right: true,
             minimum: const EdgeInsets.all(10),
-            child: OrientationBuilder(builder: ((context, orientation) {
-              return context.isPhone
-                  ? const SmallScreenApp()
-                  : const LargeScreenApp();
-            })),
+            child: OrientationBuilder(
+              builder: ((context, orientation) {
+                return context.isPhone
+                    ? const SmallScreenApp()
+                    : const LargeScreenApp();
+              }),
+            ),
           ),
         );
       })),
