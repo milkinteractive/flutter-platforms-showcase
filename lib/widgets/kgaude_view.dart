@@ -1,3 +1,5 @@
+// source https://github.com/Sorbh/kdGaugeViewFlutter
+
 import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
@@ -30,14 +32,12 @@ class KdGaugeView extends StatefulWidget {
   final Color subDivisionCircleColors;
   final Color divisionCircleColors;
 
-  final bool animate;
-  final Duration duration;
   final int fractionDigits;
 
   final Widget? child;
 
   const KdGaugeView(
-      {GlobalKey? key,
+      {Key? key,
       this.speed = 0,
       this.speedTextStyle = const TextStyle(
         color: Colors.black,
@@ -66,8 +66,6 @@ class KdGaugeView extends StatefulWidget {
       this.innerCirclePadding = 30,
       this.divisionCircleColors = Colors.blue,
       this.subDivisionCircleColors = Colors.blue,
-      this.animate = false,
-      this.duration = const Duration(milliseconds: 400),
       this.fractionDigits = 0,
       this.child,
       this.activeGaugeGradientColor})
@@ -75,64 +73,18 @@ class KdGaugeView extends StatefulWidget {
             'Alert speed array length should be equal to Alert Speed Color Array length'),
         super(key: key);
   @override
-  KdGaugeViewState createState() => KdGaugeViewState(speed, animate);
+  KdGaugeViewState createState() {
+    return KdGaugeViewState();
+  }
 }
 
-class KdGaugeViewState extends State<KdGaugeView>
-    with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
-  late Animation<double> _animation;
-
-  double _speed;
-  final bool _animate;
-
-  double lastMarkSpeed = 0;
-  double _gaugeMarkSpeed = 0;
-
-  KdGaugeViewState(this._speed, this._animate);
-
-  @override
-  void initState() {
-    if (_animate) {
-      WidgetsBinding.instance!.addPostFrameCallback((timeStamp) {
-        updateSpeed(_speed, animate: _animate);
-      });
-    } else {
-      lastMarkSpeed = _speed;
-      _gaugeMarkSpeed = _speed;
-    }
-
-    _controller = AnimationController(
-      duration: widget.duration,
-      vsync: this,
-    );
-    _animation = Tween(begin: 0.0, end: 1.0).animate(_controller)
-      ..addListener(() {
-        setState(() {
-          _gaugeMarkSpeed =
-              lastMarkSpeed + (_speed - lastMarkSpeed) * _animation.value;
-        });
-      })
-      ..addStatusListener((status) {
-        if (status == AnimationStatus.completed) {
-          lastMarkSpeed = _gaugeMarkSpeed;
-        }
-      });
-
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose();
-    super.dispose();
-  }
-
+class KdGaugeViewState extends State<KdGaugeView> {
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
+      key: widget.key,
       painter: _KdGaugeCustomPainter(
-          _gaugeMarkSpeed,
+          widget.speed,
           widget.speedTextStyle,
           widget.unitOfMeasurement,
           widget.unitOfMeasurementTextStyle,
@@ -153,19 +105,6 @@ class KdGaugeViewState extends State<KdGaugeView>
           widget.activeGaugeGradientColor),
       child: widget.child ?? Container(),
     );
-  }
-
-  void updateSpeed(double speed, {bool animate = false, Duration? duration}) {
-    if (animate) {
-      _speed = speed;
-      _controller.reset();
-      if (duration != null) _controller.duration = duration;
-      _controller.forward();
-    } else {
-      setState(() {
-        lastMarkSpeed = speed;
-      });
-    }
   }
 }
 
@@ -226,6 +165,7 @@ class _KdGaugeCustomPainter extends CustomPainter {
     this.fractionDigits,
     this.activeGaugeGradientColor,
   );
+
   @override
   void paint(Canvas canvas, Size size) {
     //get the center of the view

@@ -1,7 +1,5 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:charts_flutter/flutter.dart' as charts;
-
 import 'package:flutter/material.dart';
 import 'package:railvis/app.dart';
 
@@ -52,7 +50,7 @@ class LargeScreenApp extends StatelessWidget {
           ],
         ),
       ),
-      Expanded(flex: 1, child: Container(color: Colors.blue))
+      Expanded(flex: 1, child: MetroLinesPage())
     ]);
   }
 }
