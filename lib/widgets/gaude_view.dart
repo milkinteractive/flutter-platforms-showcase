@@ -40,8 +40,8 @@ class _GaudeViewState extends State<GaudeView>
   @override
   void initState() {
     super.initState();
-    const ms = Platform.isLinux ? 25000 : 2500;
-    const duration = Duration(milliseconds: ms);
+    var ms = Platform.isLinux ? 25000 : 2500;
+    var duration = Duration(milliseconds: ms);
     controller = AnimationController(vsync: this, duration: duration);
     animation = tweenSequence.animate(controller)
       ..addListener(() {
