@@ -2,7 +2,7 @@
 
 This showcase demonstrates the power of the Flutter Framework. Since Flutter version 3 the code can be compiled for all major platforms.
 
-In the [proof of concept movie](https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov) you see an iOS Simulator, an Android emulator, an iPad Simulator, a Linux Desktop application (top right), the macOS Desktop application (bottom left) and a Web Browser (bottom right).
+In the [proof of concept movie](https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov) you see an iOS Simulator, an Android emulator, an iPad Simulator, a Linux Desktop application (top right), the macOS Desktop application (bottom left) and a Web Browser (bottom right). Windows is supported and can be tested over the [release section](https://github.com/milkinteractive/flutter-platforms-showcase/releases/).
 
 https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov
 
