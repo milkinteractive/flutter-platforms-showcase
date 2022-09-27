@@ -1,6 +1,6 @@
 # Flutter Platforms Showcase
 
-In this showcase we proof the power of Flutter Framework and Engine. Since Flutter version 3 the app is running on all platforms.
+This showcase demonstrates the power of the Flutter Framework. Since Flutter version 3 the code can be compiled for all major platforms.
 
 In the [proof of concept movie](https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov) you see an iOS Simulator, an Android emulator, an iPad Simulator, a Linux Desktop application (top right), the macOS Desktop application (bottom left) and a Web Browser (bottom right).
 
@@ -39,7 +39,6 @@ samples, guidance on mobile development, and a full API reference.
 - https://github.com/jonataslaw/getx
 - https://github.com/Sorbh/kdGaugeViewFlutter
 
--
 ## Images
 - https://www.stadlerrail.com/de/signaltechnik/
 - https://www.flickr.com/photos/kecko/47823896391/in/photolist-2jJLm3u-2hS914C-2fS2LeL-THK9Cu-2fS2YeM-2fS2Y3V-2exFi3k-2fS2XLc-Mjkxqk-2hScy6r-UvNXFQ-UvNXkQ-MDfuPE-LZMugW-UvNY7u-TwyDYX-UvNX11
