@@ -9,17 +9,15 @@ https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8
 # Get it up and running
 
 1. [Download the Flutter SDK](https://docs.flutter.dev/get-started/install) and go through the installation process.
-2. I recommend to use the [Visual Studio Code](https://code.visualstudio.com/) as an IDE.
+2. I recommend using the [Visual Studio Code](https://code.visualstudio.com/) as the IDE.
 3. [Install the Flutter extensions for Visual Studio Code](https://docs.flutter.dev/development/tools/vs-code)
-4. Run `flutter pub get` to get the flutter packages which are defined in `pubspec.yaml` file.
+4. Run `flutter pub get` to get the Flutter packages which are defined in the `pubspec.yaml` file.
 5. Run `flutter run` to run it on a machine or device.
 
 
-## Getting Started
+## More about Flutter
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
+Here are a few resources to get you started if this is your first Flutter project:
 
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
