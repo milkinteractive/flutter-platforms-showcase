@@ -2,7 +2,7 @@
 
 In this showcase we proof the power of Flutter Framework and Engine. Since Flutter version 3 the app is running on all platforms.
 
-In the ![proof of concept movie](https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov) you see an iOS Simulator, an Android emulator, an iPad Simulator, a Linux Desktop application (top right), the macOS Desktop application (bottom left) and a Web Browser (bottom right).
+In the [proof of concept movie](https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov) you see an iOS Simulator, an Android emulator, an iPad Simulator, a Linux Desktop application (top right), the macOS Desktop application (bottom left) and a Web Browser (bottom right).
 
 https://user-images.githubusercontent.com/8030398/192461025-453de576-db0a-45b1-8034-7609039014e7.mov
 
